@@ -1,0 +1,47 @@
+@server = https://cautious-space-rotary-phone-5g45q5gv7pr3v76x-8080.app.github.dev
+@directores = {{server}}/api/directores
+@peliculas = {{server}}/api/peliculas
+@studios = {{server}}/api/studios
+@integrantes = {{server}}/api/integrantes
+###   
+
+GET {{directores}}
+###
+
+###   
+
+GET {{studios}}
+###
+
+###   
+
+GET {{integrantes}}
+###
+
+###
+GET {{peliculas}}
+###
+
+POST {{directores}}
+Content-Type: application/json
+
+{
+  "nombre" : "Quena",
+  "categoria" : "Instrumento de viento",
+  "descripcion" : "tubo con orificios que al taparlos hacen sonar diferentes notas"
+}
+
+
+###
+PATCH {{peliculas}}/1
+Content-Type: application/json
+
+{
+  "nombre" : "Jaime Hendrix"
+}
+###
+GET {{server}}/api/studios/1
+###
+GET {{server}}/api/integrantes
+###
+GET {{server}}/api/studios/1/formacion
